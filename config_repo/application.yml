@@ -1,4 +1,2 @@
-info:
-  foo: bar
 scheduler:
   fixedRate: 10000

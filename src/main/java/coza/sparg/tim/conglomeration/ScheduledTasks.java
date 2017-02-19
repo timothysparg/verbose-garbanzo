@@ -25,8 +25,6 @@ public class ScheduledTasks {
         return new RestTemplate();
     }
 
-    @org.springframework.beans.factory.annotation.Value("${info.foo}")
-    String value;
 
     @Scheduled(fixedRateString = "${scheduler.fixedRate}")
     public void reportCurrentTime() {
@@ -34,6 +32,5 @@ public class ScheduledTasks {
         Quote quote = restTemplate().getForObject(
                 "http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
         log.info(quote.toString());
-        log.error(value);
     }
 }
