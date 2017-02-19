@@ -28,8 +28,7 @@ public class ScheduledTasks {
     @org.springframework.beans.factory.annotation.Value("${info.foo}")
     String value;
 
-    //@Scheduled(fixedRateString = "${scheduler.fixedRate}")
-    @Scheduled(fixedRateString = "5000")
+    @Scheduled(fixedRateString = "${scheduler.fixedRate}")
     public void reportCurrentTime() {
 
         Quote quote = restTemplate().getForObject(
