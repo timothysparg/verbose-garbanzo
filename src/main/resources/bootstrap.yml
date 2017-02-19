@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: config-server
+    cloud:
+        config:
+            server:
+                bootstrap: true
+                git:
+                    uri: file://${user.home}/source/github/verbose-garbanzo
+                    basedir: config_repo
+#                    uri: file://${user.home}/config-repo
